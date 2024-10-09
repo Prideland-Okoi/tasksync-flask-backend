@@ -1,7 +1,5 @@
 # token.py
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from api import db
 
 class BlacklistedToken(db.Model):
     _tablename__ = 'blacklisted_tokens'
