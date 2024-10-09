@@ -1,7 +1,6 @@
 # auth.py
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from api import db
+from datetime import datetime
 
 
 class User(db.Model):
@@ -12,6 +11,11 @@ class User(db.Model):
     name = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(50), unique=True, nullable=False)
     password_hash = db.Column(db.String(100), nullable=False)
+    verification_code = db.Column(db.String(6), nullable=True)
+    verification_sent_at = db.Column(db.DateTime, nullable=True)  # New field to track when the code was sent
+    verified = db.Column(db.Boolean, default=False)
+    resend_attempts = db.Column(db.Integer, default=0)  # Track number of resends
+    last_resend_at = db.Column(db.DateTime, nullable=True)  # Track the last time a resend was requested
 
 
     def __repr__(self):
@@ -22,6 +26,7 @@ class User(db.Model):
             'id': self.id,
             'username': self.username,
             'name': self.name,
-            'email': self.email
+            'email': self.email,
+            'verified': self.verified
         }
 
