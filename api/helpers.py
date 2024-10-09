@@ -1,4 +1,6 @@
 import re
+import random
+import string
 
 
 def is_valid_email(email):
@@ -31,3 +33,7 @@ def is_valid_password(password):
         return False
 
     return True
+
+def generate_verification_code():
+    """Generate a random 6-digit verification code."""
+    return ''.join(random.choices(string.digits, k=6))
