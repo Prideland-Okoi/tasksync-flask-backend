@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.eggs/
+*.pyo
+*.pyd
+*.whl
+*.log
+*.pot
+
+# Virtual Environments
+env/
+venv/
+*.env
+
+# Flask Specific
+instance/
+*.db
+
+# IDE Files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Byte-compiled files
+*.pyo
+*.pyd
+
+# Migrations
+migrations/
+
+# Node and Front-end
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Test Coverage
+htmlcov/
+coverage.xml
+.coverage
+
+# Generated Files
+*.bak
+*.swp
+*.tmp
+*.orig
+
+# Cache
+.cache/
+.pytest_cache/
