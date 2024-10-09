@@ -1,0 +1,12 @@
+Flask-Limiter
+Flask
+Flask-SQLAlchemy
+Flask-Bcrypt
+psycopg2
+Flask-JWT-Extended
+PyJWT
+python-dotenv
+flasgger
+SQLAlchemy
+Flask-Migrate
+Flask-Mail
